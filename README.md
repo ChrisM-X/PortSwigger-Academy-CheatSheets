@@ -6,11 +6,9 @@
 
 <br>
 
-* Any labs/payloads missing from the cheatsheets are called out at the bottom of each section
-
   
 * Pending to add the following topics:
 
-    * Race Conditions
+    * Web LLM Attacks
 
     * GraphQL API Vulnerabilities
