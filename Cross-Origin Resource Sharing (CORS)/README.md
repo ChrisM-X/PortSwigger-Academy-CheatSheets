@@ -23,6 +23,8 @@
 
 * Identify what Origins are allowed to submit CORS requests to the application, submit the following header in the requests:
     * Origin: *some-value*
+
+* Test for CORS vulnerability with trusted null origin by adding Origin: null to a request
     
 * Identify if any of those requests can be used to send CORS request with credentials:
     * Access-Control-Allow-Credentials: true
