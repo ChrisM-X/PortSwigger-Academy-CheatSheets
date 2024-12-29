@@ -2,13 +2,8 @@
 
 <br>
 
-#### This section contains cheat sheets / payloads for the different topics available in the web security academy provided by PortSwigger
+#### This repo contains cheat sheets / payloads for the different topics available in the web security academy provided by PortSwigger
 
-<br>
-
-  
-* Pending to add the following topics:
-
-    * Web LLM Attacks
-
-    * GraphQL API Vulnerabilities
+Pending to include cheat sheets / payloads for the following topics:
+* Web LLM attacks
+* Web cache deception
